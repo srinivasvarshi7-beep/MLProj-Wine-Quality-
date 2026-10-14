@@ -1,0 +1,18 @@
+{
+  "source": "Copied from the printed outputs of Wine_Quality_XGBoost_LightGBM_Project.ipynb (held-out test set, 229 rows, random_state=42).",
+  "comparison": [
+    {"Model": "XGBoost Baseline",  "Accuracy": 67.69, "Precision": 65.88, "Recall": 67.69, "Weighted F1": 66.65, "Macro F1": 39.82},
+    {"Model": "XGBoost Weighted",  "Accuracy": 65.94, "Precision": 64.58, "Recall": 65.94, "Weighted F1": 65.08, "Macro F1": 38.66},
+    {"Model": "XGBoost Tuned",     "Accuracy": 69.87, "Precision": 67.23, "Recall": 69.87, "Weighted F1": 68.32, "Macro F1": 41.12},
+    {"Model": "LightGBM Baseline", "Accuracy": 68.56, "Precision": 66.07, "Recall": 68.56, "Weighted F1": 66.98, "Macro F1": 34.40},
+    {"Model": "LightGBM Tuned",    "Accuracy": 66.81, "Precision": 64.44, "Recall": 66.81, "Weighted F1": 65.44, "Macro F1": 33.49}
+  ],
+  "cross_validation": {
+    "method": "RandomizedSearchCV, n_iter=20, cv=3, scoring=f1_macro, on the training set only",
+    "XGBoost Tuned": {"best_cv_macro_f1": 0.3517877141940846},
+    "LightGBM Tuned": {"best_cv_macro_f1": 0.3667447932026866}
+  },
+  "xgboost_search_space": {"n_estimators": [100,200,300,400], "max_depth": [3,4,5,6,8], "learning_rate": [0.01,0.05,0.1,0.15,0.2], "min_child_weight": [1,3,5,7], "subsample": [0.7,0.8,0.9,1.0], "colsample_bytree": [0.7,0.8,0.9,1.0]},
+  "lightgbm_best_params": {"subsample": 1.0, "num_leaves": 50, "n_estimators": 300, "min_child_samples": 30, "max_depth": 6, "learning_rate": 0.15, "colsample_bytree": 1.0},
+  "class_weights_experiment": {"3": 30.47, "4": 5.86, "5": 0.39, "6": 0.41, "7": 1.34, "8": 11.72}
+}
