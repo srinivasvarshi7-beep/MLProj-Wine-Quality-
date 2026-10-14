@@ -34,6 +34,7 @@ machine learning algorithms, XGBoost and LightGBM, for predicting
 wine quality. The dataset contains various chemical characteristics of wine,
 such as acidity, residual sugar, chlorides, sulphates, density, pH, and alcohol
 content.
+
 The project involves data preprocessing, exploratory data analysis, feature
 selection, and splitting the dataset into training and testing sets. XGBoost and
 LightGBM models are trained on the processed data, followed by
